@@ -10,10 +10,13 @@ var testMapResult = map[string]int{"amet": 1, "dolor": 1, "ipsum": 1, "lorem": 2
 
 func TestNormaliseText(t *testing.T) {
 
-	text := `Lorem! Ipsum! 
+	textInFile := `Lorem! Ipsum! 
 			 dolor sit amet Lorem.
 	`
-	assert.Equal(t, testSliceResult, normaliseText(text))
+	assert.Equal(t, testSliceResult, normaliseText(textInFile))
+
+	simpleText := "Lorem! Ipsum! dolor sit amet Lorem."
+	assert.Equal(t, testSliceResult, normaliseText(simpleText))
 }
 
 func TestCountingWords(t *testing.T) {
