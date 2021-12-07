@@ -17,13 +17,12 @@ func (linkedList *DoublyLinkedList) PushFront(v interface{}) {
 
 	node := &Node{v, nil, nil}
 	if linkedList.IsEmpty() {
-		linkedList.head = node
 		linkedList.tail = node
 	} else {
 		current.prev = node
 		node.next = current
-		linkedList.head = node
 	}
+	linkedList.head = node
 	linkedList.size++
 
 }
