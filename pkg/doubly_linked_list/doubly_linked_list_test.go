@@ -25,7 +25,7 @@ func TestOneElementInLinkedListError(t *testing.T) {
 	_, errorL := linkedList.Last()
 
 	if errorF != nil {
-		assert.EqualError(t, errorF, "can't remove front element because LinkedList is empty! ")
+		assert.EqualError(t, errorF, "can't get first element because LinkedList is empty! ")
 	}
 	if errorL != nil {
 		assert.EqualError(t, errorL, "can't get last element because LinkedList is empty! ")
