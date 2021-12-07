@@ -184,14 +184,14 @@ func (linkedList *DoublyLinkedList) IsEmpty() bool {
 
 func (linkedList *DoublyLinkedList) First() (interface{}, error) {
 	if linkedList.IsEmpty() {
-		return errors.New("can't get first element because LinkedList is empty! "), nil
+		return nil, errors.New("can't get first element because LinkedList is empty! ")
 	}
 	return linkedList.head.value, nil
 }
 
 func (linkedList *DoublyLinkedList) Last() (interface{}, error) {
 	if linkedList.IsEmpty() {
-		return errors.New("can't get last element because LinkedList is empty! "), nil
+		return nil, errors.New("can't get last element because LinkedList is empty! ")
 	}
 	return linkedList.tail.value, nil
 }
