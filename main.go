@@ -9,7 +9,6 @@ import (
 )
 
 func main() {
-
 	args := os.Args
 	if len(args) > 1 && args[1] == "-f" {
 		top_ten_words_list.PrintTop(top_ten_words_list.GetTextInFile(args[2]))

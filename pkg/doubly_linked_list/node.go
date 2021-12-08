@@ -1,4 +1,4 @@
-package doubly_linked_list
+package doublylinkedlist
 
 type Node struct {
 	value interface{}
